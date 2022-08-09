@@ -1,8 +1,17 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+describe('Suite de tests', () => {
+  test('Vrai est vrai', () => {
+    expect(true).toBe(true);
+  });
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  test('Faux est faux', () => {
+    expect(false).toBe(false);
+  });
+});
+
+const sum = (x, y) => {
+  return x + y;
+};
+
+test('Test individuel somme', () => {
+  expect(sum(5, 8)).toBe(13);
 });
